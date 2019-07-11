@@ -62,12 +62,17 @@ public class RFunctions {
     //функция должна разбить список пополам (2 2 для 4 или 3 2 для 5)
     Pair<ArrayList<Integer>, ArrayList<Integer>> split(ArrayList<Integer> list){
         //TODO
-        int m = list.size() / 2;
+        int m;
+        if (list.size() % 2 == 0) {
+            m = list.size() / 2;
+        } else {
+            m = list.size() / 2 + 1;
+        }
         ArrayList<Integer> splRight = new ArrayList<>();
         ArrayList<Integer> splLeft = new ArrayList<>();
         int count = 0;
         for (Integer aList : list) {
-            if (count <= m) {
+            if (count < m) {
                 splLeft.add(aList);
             } else {
                 splRight.add(aList);
