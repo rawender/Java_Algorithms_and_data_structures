@@ -4,7 +4,6 @@ import java.util.Scanner;
 public class Main {
     //друг - есть связь
     //знакомый - друг друга, но не ты
-
     static String [] names = new String[]{"Ivan", "Oleg",
             "Petr", "Misha", "Aleksey"};
 
@@ -66,3 +65,4 @@ public class Main {
 
     static boolean [] used = new boolean[10];
 }
+
